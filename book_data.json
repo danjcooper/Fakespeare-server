@@ -1,0 +1,10 @@
+[
+  {
+    "book_id": 1,
+    "title": "Frankenstein",
+    "author": "Mary Shelly",
+    "blurb": "Victor Frankenstein is a scientist obsessed with generating life from lifeless matter. He subsequently manages to create a horrifying, sentient creature assembled from pieces of stolen body parts. Shunned by society and faced with eternal isolation, the creature becomes murderous with revenge against the one who brought him into existence, Frankenstein.",
+    "first_line": "You will rejoice to hear that no disaster has accompanied the commencement of an enterprise which you have regarded with such evil forebodings.",
+    "last_line": "He was soon borne away by the waves, and lost in darkness and distance."
+  }
+]
