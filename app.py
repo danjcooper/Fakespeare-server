@@ -17,7 +17,7 @@ db_string = os.getenv("DB_URL")
 db = create_engine(db_string)
 test = db.execute("SELECT * FROM book_input_book")  
 results = [dict(row) for row in test]
-print(results)
+
 
 @app.route('/')
 def index():
@@ -27,15 +27,14 @@ def index():
 # Get an array from the client of which index's have already been used.
 @app.route('/random')
 def random_book():
-    book_length = len(book_data)
+    book_length = len(results)
     random_index = random.randint(0, book_length -1)
-    return jsonify(book_data[random_index])
+    return jsonify(results[random_index])
 
 @app.route('/shuffle')
 def shuffled_books():
-    random.shuffle(book_data)
-    print(book_data)
-    return jsonify(book_data)
+    random.shuffle(results)
+    return jsonify(results)
 
 if __name__ == "main":
     app.run(debug=False)
