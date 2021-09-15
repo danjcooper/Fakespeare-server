@@ -9,7 +9,7 @@ import random
 load_dotenv()
 
 app = Flask(__name__)
-CORS(server)
+CORS(app)
 
 # DB init
 db_string = os.getenv("DB_URL")
@@ -33,7 +33,7 @@ def random_book():
     random_index = random.randint(0, book_length -1)
     return jsonify(book_data[random_index])
 
-@sapp.route('/shuffle')
+@app.route('/shuffle')
 def shuffled_books():
     random.shuffle(book_data)
     print(book_data)
