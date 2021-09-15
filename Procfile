@@ -1,0 +1,1 @@
+web: pip install && gunicorn app:app
