@@ -39,4 +39,5 @@ def shuffled_books():
     print(book_data)
     return jsonify(book_data)
 
-server.run(debug=False, port=os.getenv("PORT"))
+if __name__ == "main":
+    server.run(debug=False)
