@@ -37,12 +37,12 @@ def shuffled_books():
     return jsonify(results)
 
 @app.route('/play/<int:number_of_books>')
-def shuffled_books(number_of_books):
+def get_game_books(number_of_books):
     if number_of_books > len(results):
         return
 
     random.shuffle(results)
-    
+
     output = []
     for book in range(number_of_books):
         output.append(book)
