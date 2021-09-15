@@ -20,7 +20,7 @@ test = db.execute("SELECT * FROM book_input_book")
 @app.route('/')
 def index():
     test2 = json.dumps(test)
-    return jsonify(test2)
+    return test2
 
 # Send back a random book.
 # Get an array from the client of which index's have already been used.
