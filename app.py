@@ -1,4 +1,5 @@
 from flask import Flask
+import json
 from flask.json import jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
@@ -18,7 +19,8 @@ test = db.execute("SELECT * FROM book_input_book")
 
 @app.route('/')
 def index():
-    return jsonify(test)
+    test2 = json.dumps(test)
+    return jsonify(test2)
 
 # Send back a random book.
 # Get an array from the client of which index's have already been used.
