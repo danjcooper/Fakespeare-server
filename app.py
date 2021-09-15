@@ -39,4 +39,4 @@ def shuffled_books():
     print(book_data)
     return jsonify(book_data)
 
-server.run(debug=True)
+server.run(debug=False)
