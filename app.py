@@ -8,7 +8,7 @@ import random
 
 load_dotenv()
 
-server = Flask(__name__)
+app = Flask(__name__)
 CORS(server)
 
 # DB init
@@ -21,23 +21,23 @@ test = db.execute("SELECT * FROM book_input_book")
 for t in test:
     print(t.title)
 
-@server.route('/')
+@app.route('/')
 def index():
     return jsonify({"hi": "there"})
 
 # Send back a random book.
 # Get an array from the client of which index's have already been used.
-@server.route('/random')
+@app.route('/random')
 def random_book():
     book_length = len(book_data)
     random_index = random.randint(0, book_length -1)
     return jsonify(book_data[random_index])
 
-@server.route('/shuffle')
+@sapp.route('/shuffle')
 def shuffled_books():
     random.shuffle(book_data)
     print(book_data)
     return jsonify(book_data)
 
 if __name__ == "main":
-    server.run(debug=False)
+    app.run(debug=False)
