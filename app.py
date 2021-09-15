@@ -16,11 +16,12 @@ CORS(app)
 db_string = os.getenv("DB_URL")
 db = create_engine(db_string)
 test = db.execute("SELECT * FROM book_input_book")  
+results = [dict(row) for row in test]
+print(results)
 
 @app.route('/')
 def index():
-    test2 = json.dumps(test)
-    return test2
+    return jsonify(results)
 
 # Send back a random book.
 # Get an array from the client of which index's have already been used.
