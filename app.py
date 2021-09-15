@@ -23,7 +23,7 @@ for t in test:
 
 @server.route('/')
 def index():
-    return jsonify(book_data)
+    return jsonify({"hi": "there"})
 
 # Send back a random book.
 # Get an array from the client of which index's have already been used.
