@@ -45,7 +45,7 @@ def get_game_books(number_of_books):
 
     output = []
     for book in range(number_of_books):
-        output.append(book)
+        output.append(results[book])
     return jsonify(output)
 
 if __name__ == "main":
