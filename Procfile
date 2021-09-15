@@ -1,1 +1,1 @@
-web: pip install && gunicorn app:app
+web: pip install flask gunicorn flask-cors && gunicorn app:app
