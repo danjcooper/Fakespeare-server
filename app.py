@@ -11,8 +11,8 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config['CORS_HEADERS'] = 'Content-Type'
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
-# CORS(app)
+# cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app)
 
 # DB init
 db_string = os.getenv("DB_URL")
