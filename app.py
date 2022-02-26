@@ -55,4 +55,4 @@ def get_game_books(number_of_books):
     return jsonify(output)
 
 if __name__ == "main":
-    app.run(debug=False)
+    app.run(debug=True)
