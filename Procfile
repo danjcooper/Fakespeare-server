@@ -1,1 +1,1 @@
-web: pip install flask gunicorn flask-cors python-dotenv sqlalchemy && gunicorn app:app
+web: pip install flask gunicorn flask-cors python-dotenv sqlalchemy && gunicorn app:app --preload
